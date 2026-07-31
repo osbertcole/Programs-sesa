@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sesa Exchange, Programs, Journey and Visa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Barlow+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#F46A1F;--orange-dk:#D2540C;--cyan:#16C8DC;--coral:#F9485A;--gold:#FFB116;--green:#1FBF6B;--purple:#7A5BD8;--ink:#0E1116;--ink-warm:#17110C;--ink-soft:#4A5160;--paper:#FFFFFF;--mist:#FBF4EE;--line:#ECE0D6;--nav:#15100C;--disp:"Barlow Semi Condensed",system-ui,sans-serif;--body:"Barlow",system-ui,sans-serif;--maxw:1180px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:var(--disp);font-weight:800;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase}
+section{padding:clamp(52px,7vw,96px) 0}
+.eyebrow{font-family:var(--body);font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--orange);display:inline-block;margin-bottom:14px}
+.eyebrow.on-dark{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--body);font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.03em;padding:.8em 1.6em;border-radius:4px;border:2px solid transparent;cursor:pointer;transition:transform .16s,background .2s,color .2s,border-color .2s}
+.btn-accent{background:var(--orange);color:#fff}
+.btn-accent:hover{background:var(--orange-dk);transform:translateY(-2px)}
+.btn-out{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-out:hover{transform:translateY(-2px)}
+.spectrum{height:5px;display:flex}.spectrum i{flex:1}
+.spectrum i:nth-child(1){background:var(--cyan)}.spectrum i:nth-child(2){background:var(--green)}.spectrum i:nth-child(3){background:var(--gold)}.spectrum i:nth-child(4){background:var(--orange)}.spectrum i:nth-child(5){background:var(--coral)}.spectrum i:nth-child(6){background:var(--purple)}
+.nav{position:sticky;top:0;z-index:60;background:var(--nav)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.nav .logo{height:23px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-weight:600;font-size:.92rem;color:#fff;opacity:.82;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav .btn{padding:.55em 1.2em}
+@media(max-width:960px){.nav-links a:not(.btn){display:none}}
+.hero{background:#fff}
+.hero .wrap{padding-top:clamp(46px,7vw,90px);padding-bottom:clamp(40px,6vw,74px)}
+.hero h1{font-size:clamp(2.6rem,6.2vw,4.9rem);max-width:17ch;margin:.1em 0 .4em}
+.hero h1 .b{color:var(--orange)}
+.hero p.lede{font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:58ch;color:var(--ink-soft);font-weight:500}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hbadge{font-weight:700;font-size:.82rem;background:var(--mist);border:1px solid var(--line);border-radius:100px;padding:.5em 1em;color:var(--ink)}
+.hbadge b{color:var(--orange)}
+.shead{margin-bottom:clamp(26px,4vw,44px)}
+.shead h2{font-size:clamp(2rem,4.2vw,3.1rem);max-width:22ch}
+.shead p{max-width:62ch;color:var(--ink-soft);font-weight:500;margin-top:12px;font-size:1.04rem}
+/* journey */
+.journey{background:var(--ink);color:#fff}
+.journey .eyebrow{color:var(--gold)}.journey h2{color:#fff}
+.jgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:6px}
+.jstep{padding:22px 18px;border-top:4px solid var(--c);background:rgba(255,255,255,.02)}
+.jstep b.n{font-family:var(--disp);font-size:2rem;font-weight:800;color:var(--c);display:block;line-height:1;margin-bottom:8px}
+.jstep h3{color:#fff;font-size:1.12rem;margin-bottom:5px}
+.jstep p{color:rgba(255,255,255,.7);font-weight:500;font-size:.88rem}
+@media(max-width:900px){.jgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.jgrid{grid-template-columns:1fr}}
+/* programs detailed */
+.programs{background:var(--mist)}
+.prog{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:20px}
+.prog .head{display:flex;align-items:center;gap:16px;padding:22px 26px;border-bottom:1px solid var(--line)}
+.prog .chip{width:52px;height:52px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--c);color:#fff;font-family:var(--disp);font-weight:800;font-size:1.5rem}
+.prog .head h3{font-size:1.7rem}
+.prog .head .tag{display:inline-block;margin-top:3px;font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:#fff;background:var(--c);padding:.28em .7em;border-radius:3px}
+.prog .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0}
+.prog .info{padding:24px 26px;border-right:1px solid var(--line)}
+.prog .info>p{color:var(--ink-soft);font-weight:500;margin-bottom:18px}
+.lbl{font-weight:700;font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--c);margin:0 0 8px}
+.dolist{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.dolist li{display:flex;gap:.6em;font-weight:500;font-size:.95rem}
+.dolist li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c);margin-top:8px;flex:none}
+.who{background:var(--mist);border-radius:9px;padding:12px 14px;font-size:.92rem;font-weight:500;color:var(--ink)}
+.who b{color:var(--c)}
+.prog .flowbox{padding:24px 26px;background:#fff}
+.flow{list-style:none;counter-reset:s}
+.flow li{position:relative;padding:0 0 15px 34px;counter-increment:s}
+.flow li:last-child{padding-bottom:0}
+.flow li::before{content:counter(s);position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--c);color:#fff;font-family:var(--disp);font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+.flow li::after{content:"";position:absolute;left:10.5px;top:22px;bottom:1px;width:2px;background:var(--line)}
+.flow li:last-child::after{display:none}
+.flow b{font-family:var(--disp);text-transform:uppercase;font-size:.98rem;display:block}
+.flow span{font-size:.88rem;color:var(--ink-soft);font-weight:500}
+@media(max-width:780px){.prog .grid{grid-template-columns:1fr}.prog .info{border-right:none;border-bottom:1px solid var(--line)}}
+/* fees */
+.fees .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.fee-head{grid-column:1 / -1;margin-bottom:6px}
+.fee-head h2{font-size:clamp(1.9rem,4vw,2.9rem)}
+.fee-head p{color:var(--ink-soft);font-weight:500;margin-top:10px;max-width:60ch}
+.fcard{border-radius:16px;padding:clamp(24px,3vw,34px);color:#fff;display:flex;flex-direction:column}
+.fcard.a{background:var(--orange)}.fcard.b{background:var(--ink)}
+.fcard .wk{font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;opacity:.92}
+.fcard .amt{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;margin:6px 0 2px}
+.fcard .amt small{font-size:1rem;font-weight:600;opacity:.85}
+.fee-tiers{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fcard{position:relative}
+.fcard .best-badge{position:absolute;top:16px;right:16px;background:var(--gold);color:var(--ink);font-family:var(--disp);text-transform:uppercase;font-weight:800;font-size:.7rem;letter-spacing:.04em;padding:.35em .75em;border-radius:100px}
+.fcard .plus{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.fcard .plus li{display:flex;gap:.6em;font-weight:500;font-size:.95rem;opacity:.97}
+.fcard .plus li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:8px;flex:none}
+.fcard p{font-weight:500;font-size:.95rem;opacity:.92;margin-top:6px}
+.incbox{grid-column:1 / -1;background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,30px);margin-top:4px}
+.incbox .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px;margin-top:14px}
+.incbox li{list-style:none;display:flex;gap:.6em;font-weight:500;font-size:.95rem}
+.incbox li::before{content:"";width:8px;height:8px;border-radius:50%;margin-top:8px;flex:none}
+.incbox .in li::before{background:var(--green)}
+.incbox .out li::before{background:var(--coral)}
+@media(max-width:640px){.fees .wrap{grid-template-columns:1fr}.incbox .cols{grid-template-columns:1fr}.fee-tiers{grid-template-columns:1fr}}
+/* visa */
+.visa{background:var(--ink-warm);color:#fff}
+.visa .eyebrow{color:var(--gold)}.visa h2{color:#fff}
+.visa .sub{color:rgba(255,255,255,.8);font-weight:500;max-width:62ch;margin-top:12px;font-size:1.04rem}
+.visa-tool{margin-top:28px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:clamp(22px,3vw,32px)}
+.visa-tool label{font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);display:block;margin-bottom:10px}
+.visa-tool select{width:100%;max-width:440px;font-family:var(--body);font-size:1rem;font-weight:500;color:#fff;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:8px;padding:.72em .9em}
+.visa-tool select option,.visa-tool select optgroup{color:#111}
+.vresult{margin-top:24px;display:none}
+.vresult.show{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.vtop{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:18px}
+.vbadge{display:inline-block;font-family:var(--disp);text-transform:uppercase;font-weight:800;font-size:1.05rem;padding:.4em .9em;border-radius:6px}
+.vbadge.free{background:var(--green);color:#fff}
+.vbadge.paid{background:var(--gold);color:var(--ink)}
+.vfor{font-weight:600;color:rgba(255,255,255,.85)}
+.vfields{display:grid;grid-template-columns:1fr 1fr;gap:16px 30px}
+.vf b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--gold);margin-bottom:4px;font-family:var(--body);font-weight:700}
+.vf span{font-weight:500;color:rgba(255,255,255,.9);font-size:.95rem}
+.vdocs{grid-column:1 / -1}
+.vdocs ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:7px 26px;margin-top:6px}
+.vdocs li{display:flex;gap:.5em;font-weight:500;font-size:.92rem;color:rgba(255,255,255,.88)}
+.vdocs li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);margin-top:7px;flex:none}
+.vnote{margin-top:22px;font-size:.82rem;color:rgba(255,255,255,.55);max-width:66ch}
+@media(max-width:640px){.vfields,.vdocs ul{grid-template-columns:1fr}}
+/* living */
+.living{background:#fff}
+.living .box{background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:clamp(26px,3.5vw,44px);text-align:center}
+.living h2{font-size:clamp(1.8rem,3.6vw,2.6rem);max-width:24ch;margin:0 auto}
+.living p{color:var(--ink-soft);font-weight:500;max-width:60ch;margin:14px auto 0}
+.living .btn{margin-top:24px}
+.foot{background:var(--nav);color:rgba(255,255,255,.66);padding:52px 0 0}
+.foot-top{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:center;margin-bottom:26px}
+.foot .logo{height:25px}
+.foot-cta a{color:var(--gold);font-weight:700;font-size:1.05rem}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:22px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;font-weight:500}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,58px);align-items:center}
+.hero-photo{position:relative;display:flex;justify-content:center}
+.hero-photo .accent{position:absolute;right:-14px;bottom:-16px;width:56%;height:56%;border-radius:22px;background:var(--gold);z-index:0}
+.hero-photo .frame{position:relative;z-index:1;width:100%;aspect-ratio:4/3.5;border-radius:26px 26px 26px 72px;overflow:hidden;background:linear-gradient(140deg,var(--orange),var(--gold));box-shadow:0 30px 60px -34px rgba(20,16,12,.5)}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-photo{max-width:440px;margin-top:8px}}
+.visa-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,50px);align-items:start}
+.visa-photo .frame{display:block;width:100%;aspect-ratio:4/4.7;border-radius:20px;overflow:hidden;background:linear-gradient(140deg,var(--cyan),var(--purple));position:sticky;top:90px;box-shadow:0 30px 60px -34px rgba(0,0,0,.6)}
+.visa-photo .frame img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:860px){.visa-grid{grid-template-columns:1fr}.visa-photo{display:none}}
+.incbox ul.out{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;margin-top:12px}
+.prog,.fcard{transition:transform .16s ease, box-shadow .22s ease;will-change:transform}
+.prog:hover{box-shadow:0 28px 54px -30px rgba(20,16,12,.5)}
+.jstep{transition:transform .2s ease, background .2s ease}
+.jstep:hover{transform:translateY(-6px);background:rgba(255,255,255,.06)}
+.hero-photo .frame,.visa-photo .frame{transition:transform .25s ease}
+@media(max-width:640px){.incbox ul.out{grid-template-columns:1fr}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body id="top">
+<header class="nav">
+  <div class="spectrum"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap nav-inner">
+    <a href="#" aria-label="Sesa Initiative home"><img class="logo" src="data:image/png;base64,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" alt="Sesa Initiative"/></a>
+    <nav class="nav-links">
+      <a href="#">The Exchange</a>
+      <a href="#programs">Programs</a>
+      <a href="#journey">Journey</a>
+      <a href="#visa">Visa</a>
+      <a href="#" class="btn btn-accent">Apply</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Programs, Journey and Visa</span>
+      <h1>How the <span class="b">Sesa Exchange</span> works, step by step.</h1>
+      <p class="lede">One clear journey that runs across every program, what each program actually involves week to week, a simple fee, and exactly what you need to enter Ghana based on the passport you hold. Open to volunteers of every nationality.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-accent">Start your application</a>
+        <a href="#" class="btn btn-out">Back to main site</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hbadge"><b>Open to all</b> nationalities</span>
+        <span class="hbadge"><b>$50</b> for 6 weeks</span>
+        <span class="hbadge"><b>$100</b> for 8 weeks</span>
+      </div>
+    </div>
+    <div class="hero-photo"><span class="accent"></span><span class="frame"><img src="https://images.pexels.com/photos/21348214/pexels-photo-21348214.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100" alt="Young people in a rural African community" loading="eager" onerror="this.style.display='none'"></span></div>
+  </div>
+</section>
+
+<section id="journey" class="journey reveal">
+  <div class="wrap">
+    <span class="eyebrow on-dark">The journey</span>
+    <div class="shead"><h2>One flow, every program.</h2><p>Whichever program you choose, your path from curious to on the ground looks the same. Only the project work inside step six changes.</p></div>
+    <div class="jgrid" id="jgrid"></div>
+  </div>
+</section>
+
+<section id="programs" class="programs reveal">
+  <div class="wrap">
+    <span class="eyebrow">The programs</span>
+    <div class="shead"><h2>Four programs, one method.</h2><p>Each program applies the same journey to a different kind of impact. Here is who it suits, what you will do, and the flow of your project on the ground.</p></div>
+    <div id="progList"></div>
+  </div>
+</section>
+
+<section class="fees reveal">
+  <div class="wrap">
+    <div class="fee-head">
+      <span class="eyebrow">Fees</span>
+      <h2>Two ways to take part.</h2>
+      <p>Open to volunteers of all nationalities. Your contribution helps keep you housed and supported, and puts a direct amount into your community project. Flights, visa and travel insurance are arranged and paid separately by you.</p>
+    </div>
+    <div class="fee-tiers" id="feeTiers"></div>
+    <div class="incbox">
+      <p class="lbl" style="color:var(--coral)">Not included, arranged and paid by you</p>
+      <ul class="out" id="incOut"></ul>
+    </div>
+  </div>
+</section>
+
+<section id="visa" class="visa reveal">
+  <div class="wrap visa-grid">
+    <div class="visa-main">
+    <span class="eyebrow on-dark">Visa and entry to Ghana</span>
+    <div class="shead"><h2>Find your visa requirements.</h2></div>
+    <p class="sub">The exchange is open to all nationalities. Ghana's entry rules depend on the passport you hold. Pick your country to see exactly what applies to you and what to prepare.</p>
+    <div class="visa-tool">
+      <label for="nat">Select your country of nationality</label>
+      <select id="nat"><option value="">Choose your country...</option></select>
+      <div class="vresult" id="vresult">
+        <div class="vtop"><span class="vbadge" id="vbadge"></span><span class="vfor" id="vfor"></span></div>
+        <div class="vfields">
+          <div class="vf"><b>Visa type</b><span id="vType"></span></div>
+          <div class="vf"><b>Visa fee</b><span id="vFee"></span></div>
+          <div class="vf"><b>How to apply</b><span id="vApply"></span></div>
+          <div class="vf"><b>When to apply</b><span id="vWhen"></span></div>
+          <div class="vf"><b>Stay allowed</b><span id="vStay"></span></div>
+          <div class="vf"><b>Passport validity</b><span id="vPass"></span></div>
+          <div class="vf vdocs"><b>Documents to prepare</b><ul id="vDocs"></ul></div>
+        </div>
+      </div>
+      <p class="vnote">Immigration policy changes. Always confirm the current rules on Ghana's official e-Visa and immigration portal, and with your nearest Ghanaian mission, before you book travel. A few countries hold special bilateral arrangements, so check the portal for your case. Sesa provides your official invitation letter to support the application.</p>
+    </div>
+    </div>
+    <div class="visa-photo"><span class="frame"><img src="https://images.pexels.com/photos/7683910/pexels-photo-7683910.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Volunteers from around the world" loading="lazy" onerror="this.style.display='none'"></span></div>
+  </div>
+</section>
+
+<section class="living reveal">
+  <div class="wrap">
+    <div class="box">
+      <span class="eyebrow">Join us</span>
+      <h2>Ready to change something, and carry it home?</h2>
+      <p>Pick your program, choose 6 or 8 weeks, and apply. We read every application and reply within five working days. The Sesa Exchange is open to volunteers of all nationalities.</p>
+      <a href="#" class="btn btn-accent">Start your application</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <img class="logo" src="data:image/png;base64,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" alt="Sesa Initiative"/>
+      <div class="foot-cta">Ready to join? <a href="#">Start your application</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>Sesa Initiative, Cape Coast, Ghana, rural first across Africa</span>
+      <span>Health, Tech, Environment, Education</span>
+    </div>
+  </div>
+  <div class="spectrum"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</footer>
+
+<script>
+/* =====================================================================
+   SESA EXCHANGE, EDIT EVERYTHING HERE.
+   Add a program: copy one { ... } block inside CONFIG.programs, give it a
+   name, colour, duration, summary, who it is for, a "does" list and a
+   five step flow. Save. The Programs section rebuilds itself, no other
+   edits needed. Same idea for fees and visa below.
+   ===================================================================== */
+const CONFIG = {
+  journey: [
+    {t:"Discover", d:"Explore the programs and countries and decide what fits you."},
+    {t:"Apply", d:"Submit the free online application, about ten minutes."},
+    {t:"Interview and Match", d:"A 30 minute call, then we match you to a program, country and community."},
+    {t:"Accept and Secure", d:"Confirm your place and pay the contribution to lock your slot."},
+    {t:"Prepare", d:"Visa, invitation letter, flights, insurance and a pre departure orientation."},
+    {t:"Realize", d:"Arrive, onboard with your buddy and deliver your project."},
+    {t:"Give Back", d:"Receive your certificate and reference and join the alumni network."}
+  ],
+  programs: [
+    {name:"Health", color:"cyan", tag:"6 to 10 weeks",
+     summary:"Support frontline health in rural communities where clinics and staff are stretched thin. You work alongside local health workers to extend basic care, health education and community outreach.",
+     who:"Great for medical, nursing, public health and psychology students or graduates, or anyone who cares about wellbeing.",
+     does:["Run community screening, sanitation and wellbeing drives","Support under resourced clinics with daily capacity","Deliver maternal, child and hygiene education","Help gather simple community health data"],
+     flow:[["Outreach planning","Map the community's needs with local health workers."],["Health drives","Run screening, sanitation and wellbeing drives in villages."],["Clinic support","Assist under resourced clinics with day to day capacity."],["Health education","Deliver maternal, child and hygiene education sessions."],["Impact handover","Leave a report and a plan the local team can continue."]]},
+    {name:"Tech", color:"purple", tag:"6 to 10 weeks",
+     summary:"Help rural youth and local organisations get online and future ready through hands on digital skills, coding and data literacy.",
+     who:"Ideal for developers, data and IT professionals, designers, or students in any tech field.",
+     does:["Run digital skills and coding bootcamps for youth","Introduce data literacy and simple AI concepts","Build one useful digital tool for a local partner","Train local facilitators to keep it going"],
+     flow:[["Skills assessment","Gauge the digital level of learners and partner orgs."],["Bootcamps","Run digital skills and coding bootcamps for youth."],["Data and AI clubs","Introduce data literacy and simple AI concepts."],["Build a tool","Ship one useful digital tool for a local partner."],["Train the trainer","Hand it over so locals can keep teaching it."]]},
+    {name:"Environment", color:"green", tag:"6 to 8 weeks",
+     summary:"Take on hands on climate and conservation work, from tree growing and clean ups to climate education in rural schools.",
+     who:"Suits environmental science students, climate advocates, and anyone who likes working outdoors.",
+     does:["Run clean ups and tree growing drives","Teach climate and conservation in rural schools","Mobilise the community around one green goal","Set up simple monitoring for after you leave"],
+     flow:[["Baseline survey","Assess the local environmental challenge."],["Clean ups and planting","Run clean ups and tree growing drives."],["School climate education","Teach climate and conservation in rural schools."],["Community campaign","Mobilise the community around one green goal."],["Monitoring plan","Leave a simple plan to track progress after you go."]]},
+    {name:"Education", color:"orange", tag:"6 to 10 weeks",
+     summary:"Mentor young people and strengthen learning through literacy support, study skills and youth leadership workshops.",
+     who:"Perfect for teachers, education students, youth workers and confident communicators.",
+     does:["Run mentoring, reading and study skills sessions","Facilitate youth leadership and confidence workshops","Support a youth run showcase or event","Leave materials teachers can reuse"],
+     flow:[["Needs assessment","Understand where learners need the most support."],["Mentoring and literacy","Run mentoring, reading and study skills sessions."],["Leadership workshops","Facilitate youth leadership and confidence workshops."],["Youth led event","Support a youth run showcase or event."],["Learning handover","Document materials for teachers to reuse."]]}
+  ],
+  fees:{
+    tiers:[
+      {weeks:"6 week placement", price:"$50", sub:"USD", best:false, desc:"The core program in your chosen sector and community. Your contribution includes:", perks:[
+        "Vetted accommodation in a host home or volunteer house",
+        "An in country buddy and full on the ground support",
+        "A direct contribution to your community project",
+        "A completion certificate and a written reference"]},
+      {weeks:"8 week placement", price:"$100", sub:"USD", best:true, desc:"Everything in the 6 week program, plus a guided, more inclusive experience:", perks:[
+        "Personalized tours with our local partners, shaped around your interests",
+        "A dedicated personal buddy with you for the whole stay",
+        "Guided weekend immersion to heritage sites like Cape Coast Castle and Kakum",
+        "A welcome pack and airport pickup on arrival",
+        "Priority placement and first pick of projects",
+        "A closing celebration and full alumni network access"]}
+    ],
+    excludes:["International flights","Visa or e-Visa (free for African passports, standard fee otherwise)","Travel and health insurance","Personal spending money"]
+  },
+  visa:{
+    africa:{badge:"Free e-Visa", cls:"free", forText:"For holders of any African passport",
+      type:"Free e-Visa, an electronic travel authorization.",
+      fee:"No fee, free of charge from 25 May 2026.",
+      apply:"Apply online on Ghana's official e-Visa portal before you travel.",
+      when:"Apply at least 2 to 3 weeks ahead, approval is not instant.",
+      stay:"Short stay entry, extendable in country for a full placement.",
+      pass:"Passport valid for at least 6 months.",
+      docs:["Passport bio data page","One passport photo","Sesa invitation letter (we provide)","Proof of accommodation (covered by placement)","Yellow fever vaccination certificate","Return or onward ticket"]},
+    world:{badge:"e-Visa, standard fee", cls:"paid", forText:"For holders of a non African passport",
+      type:"Ghana e-Visa, single or multiple entry.",
+      fee:"Standard visa fee applies, roughly 60 to 150 USD, confirm on the portal.",
+      apply:"Apply online on Ghana's e-Visa portal, or at your nearest Ghanaian mission.",
+      when:"Apply 4 to 6 weeks ahead to be safe.",
+      stay:"Usually up to 90 days, extendable in country for a full placement.",
+      pass:"Passport valid for at least 6 months, with a blank visa page.",
+      docs:["Passport bio data page","Two passport photos","Sesa invitation letter (we provide)","Proof of accommodation (covered by placement)","Proof of funds","Yellow fever vaccination certificate","Return or onward ticket"]}
+  },
+  countriesAfrica:["Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Congo","DR Congo","Cote d'Ivoire","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe"],
+  countriesWorld:["Argentina","Australia","Austria","Bangladesh","Belgium","Brazil","Bulgaria","Canada","Chile","China","Colombia","Croatia","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","India","Indonesia","Ireland","Israel","Italy","Japan","Jordan","Kazakhstan","Latvia","Lebanon","Lithuania","Luxembourg","Malaysia","Mexico","Nepal","Netherlands","New Zealand","Norway","Pakistan","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Saudi Arabia","Serbia","Singapore","Slovakia","Slovenia","South Korea","Spain","Sri Lanka","Sweden","Switzerland","Thailand","Turkey","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Vietnam","Other, not listed"]
+};
+
+/* ---------- render (layout only, no need to edit) ---------- */
+const COLORS=["cyan","green","gold","orange","coral","purple"];
+function el(t,c,h){const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+
+(function(){const g=document.getElementById('jgrid');CONFIG.journey.forEach((s,i)=>{const c=COLORS[i%COLORS.length];const d=el('div','jstep');d.style.setProperty('--c','var(--'+c+')');d.innerHTML='<b class="n">'+String(i+1).padStart(2,'0')+'</b><h3>'+s.t+'</h3><p>'+s.d+'</p>';g.appendChild(d);});})();
+
+(function(){const g=document.getElementById('progList');CONFIG.programs.forEach(pr=>{
+  let does='';pr.does.forEach(d=>does+='<li>'+d+'</li>');
+  let flow='';pr.flow.forEach(f=>flow+='<li><b>'+f[0]+'</b><span>'+f[1]+'</span></li>');
+  const art=el('article','prog');art.style.setProperty('--c','var(--'+pr.color+')');
+  art.innerHTML=
+   '<div class="head" style="--c:var(--'+pr.color+')"><span class="chip" style="--c:var(--'+pr.color+')">'+pr.name[0]+'</span><div><h3>'+pr.name+'</h3><span class="tag" style="background:var(--'+pr.color+')">'+pr.tag+'</span></div></div>'+
+   '<div class="grid"><div class="info" style="--c:var(--'+pr.color+')"><p>'+pr.summary+'</p><p class="lbl">What you will do</p><ul class="dolist">'+does+'</ul><div class="who"><b>Who it is for. </b>'+pr.who+'</div></div>'+
+   '<div class="flowbox" style="--c:var(--'+pr.color+')"><p class="lbl">Program flow</p><ol class="flow">'+flow+'</ol></div></div>';
+  g.appendChild(art);});})();
+
+(function(){const c=document.getElementById('feeTiers');CONFIG.fees.tiers.forEach(t=>{
+  const card=el('div','fcard '+(t.best?'b':'a'));let h='';
+  if(t.best)h+='<span class="best-badge">Most inclusive</span>';
+  h+='<span class="wk">'+t.weeks+'</span><div class="amt">'+t.price+'<small> '+t.sub+'</small></div><p>'+t.desc+'</p>';
+  if(t.perks){h+='<ul class="plus">';t.perks.forEach(p=>h+='<li>'+p+'</li>');h+='</ul>';}
+  card.innerHTML=h;c.appendChild(card);});})();
+(function(){const o=document.getElementById('incOut');CONFIG.fees.excludes.forEach(x=>o.appendChild(el('li',null,x)));})();
+
+(function(){const sel=document.getElementById('nat');
+  const og1=el('optgroup');og1.label='African passports (free e-Visa)';CONFIG.countriesAfrica.forEach(c=>{const o=el('option');o.value='africa';o.textContent=c;og1.appendChild(o);});sel.appendChild(og1);
+  const og2=el('optgroup');og2.label='Other passports (standard e-Visa)';CONFIG.countriesWorld.forEach(c=>{const o=el('option');o.value='world';o.textContent=c;og2.appendChild(o);});sel.appendChild(og2);
+  sel.addEventListener('change',()=>{const r=sel.value;const res=document.getElementById('vresult');if(!r){res.classList.remove('show');return;}
+    const v=CONFIG.visa[r];const b=document.getElementById('vbadge');b.textContent=v.badge;b.className='vbadge '+v.cls;
+    document.getElementById('vfor').textContent=v.forText+' ('+sel.options[sel.selectedIndex].text+')';
+    document.getElementById('vType').textContent=v.type;
+    document.getElementById('vFee').textContent=v.fee;
+    document.getElementById('vApply').textContent=v.apply;
+    document.getElementById('vWhen').textContent=v.when;
+    document.getElementById('vStay').textContent=v.stay;
+    document.getElementById('vPass').textContent=v.pass;
+    const ul=document.getElementById('vDocs');ul.innerHTML='';v.docs.forEach(d=>ul.appendChild(el('li',null,d)));
+    res.classList.add('show');});})();
+
+(function(){const els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return;}
+  const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.06});els.forEach(e=>io.observe(e));})();
+
+(function(){
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  function tilt(sel,deg,lift){document.querySelectorAll(sel).forEach(function(card){
+    card.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+      card.style.transform='perspective(1000px) rotateX('+(-py*deg).toFixed(2)+'deg) rotateY('+(px*deg).toFixed(2)+'deg) translateY(-'+lift+'px)';});
+    card.addEventListener('mouseleave',function(){card.style.transform='';});
+  });}
+  tilt('.prog',2.2,6); tilt('.fcard',4,8);
+  document.querySelectorAll('.hero-photo,.visa-photo').forEach(function(p){var f=p.querySelector('.frame');if(!f)return;
+    p.addEventListener('mousemove',function(e){var r=p.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+      f.style.transform='perspective(1100px) rotateX('+(-py*5).toFixed(2)+'deg) rotateY('+(px*5).toFixed(2)+'deg) scale(1.02)';});
+    p.addEventListener('mouseleave',function(){f.style.transform='';});
+  });
+})();
+</script>
+</body>
+</html>
